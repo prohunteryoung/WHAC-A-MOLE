@@ -28,7 +28,7 @@ squares.forEach((e) => e.addEventListener('mousedown', getPoint));
 let count = 5;
 timeRemained.textContent = count;
 
-let goal = 0;
+let goal = 10;
 
 function countDown() {
   count--;
@@ -63,8 +63,8 @@ function onStart() {
 settingBtn.addEventListener('click', onSetting);
 
 function onSetting() {
-  const time = prompt('Time?');
+  const time = prompt('Time?', 10);
   count = time;
   timeRemained.textContent = count;
-  goal = prompt('Minimum score?');
+  goal = prompt('Minimum score?', 10);
 }
